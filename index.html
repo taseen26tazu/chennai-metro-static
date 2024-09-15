@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chennai Metro Navigation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome To Chennai Metro </h1>
+        </header>
+        <main>
+            <section id="action-region">
+                <h2>Plan Your Journey</h2>
+                <div class="station-select">
+                    <label for="sourceStation">From:</label>
+                    <select id="sourceStation"></select>
+                </div>
+                <div class="station-select">
+                    <label for="destinationStation">To:</label>
+                    <select id="destinationStation"></select>
+                </div>
+                <button id="pathDistance" class="action-button">Find Path</button>
+                <button id="showMap" class="action-button2">Show Metro Map</button>
+            </section>
+            <section id="result-region">
+                <h2>Journey Details</h2>
+                <div id="results"></div>
+            </section>
+        </main>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
